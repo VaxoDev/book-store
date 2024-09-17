@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+   <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>book-store</title>
+</head>
+
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav__logo">
+            <i class="ri-book-3-line"> book-store</i>
+         </a>
+
+         <div class="nav__menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="#home" class="nav__link active-link">
+                     <i class="ri-home-line"></i>
+                     <span>მთავარი</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="#about" class="nav__link">
+                     <i class="ri-information-line"></i>
+                     <span>შესახებ</span>
+                  </a>
+               </li>
+               <li class="nav__item">
+                  <a href="#featured" class="nav__link">
+                     <i class="ri-book-3-line"></i>
+                     <span>გამორჩეული</span>
+                  </a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#new" class="nav__link">
+                     <i class="ri-bookmark-line"></i>
+                     <span>ახალი წიგნები</span>
+                  </a>
+               </li>
+
+               <li class="nav__item">
+                  <a href="#testimonial" class="nav__link">
+                     <i class="ri-message-3-line"></i>
+                     <span>მომხმარებელთა არჩევანი</span>
+                  </a>
+               </li>
+
+            </ul>
+         </div>
+         <div class="nav__actions">
+            <!-- Search button-->
+            <i class="ri-search-line search-button" id="search-button"></i>
+            <!-- Theme button-->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+            <!-- Favorites button-->
+            <i class="ri-heart-line" id="favorites-button"></i>
+         </div>
+      </nav>
+   </header>
+
+   <!--==================== SEARCH ====================-->
+   <div id="search-content" class="search">
+      <form action="" class="search__form">
+         <i class="ri-search-line search__icon"></i>
+         <input type="search" placeholder="შეიყვანეთ წიგნის სახელი" class="search__input" id="search-input">
+      </form>
+      <div id="search-results" class="search__results"></div>
+      <i class="ri-close-line search__close" id="search-close"></i>
+   </div>
+   <!-- ====================== favorites ================-->
+   <div class="favorites" id="favorites-content">
+      <h2 class="favorites__title">ფავორიტები</h2>
+      <i class="ri-close-line favorites__close" id="favorites-close"></i>
+
+      <div class="favorites__container">
+         <!-- Favorites will be dynamically added here -->
+      </div>
+   </div>
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__data">
+               <h1 class="home__title">
+                  აარჩიეთ და შეიძინეთ წიგნები
+               </h1>
+               <p class="home__description">
+                  იპოვეთ საუკეთესო წიგნები შენი საყვარელი მწერლებისგან, აღმოაჩინე ყველა სახის
+                  კატეგორიის წიგნი და ისარგებლე ფასდაკლებებით.
+               </p>
+               <a href="#new" class="button">აღმოაჩინე</a>
+            </div>
+            <div class="home__images">
+               <div class="home__swiper swiper">
+                  <div class="swiper-wrapper">
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/home-book-1.png" alt="image" class="home__img">
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/home-book-2.png" alt="image" class="home__img">
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/home-book-3.png" alt="image" class="home__img">
+                     </article>
+
+                     <article class="home__article swiper-slide">
+                        <img src="assets/img/home-book-4.png" alt="image" class="home__img">
+                     </article>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== SERVICES ====================-->
+      <section class="services section">
+         <div class="services__container container grid">
+            <article class="services__card">
+               <i class="ri-store-line"></i>
+               <h3 class="services__title">მაღაზიაში შეძენა</h3>
+               <p class="services__description">შეიძინეთ წიგნები ფიზიკურად</p>
+            </article>
+
+            <article class="services__card">
+               <i class="ri-percent-line"></i>
+               <h3 class="services__title">ექსკლუზიური ფასდაკლებები</h3>
+               <p class="services__description">გამოიყენეთ სპეციალური შეთავაზებები</p>
+            </article>
+
+            <article class="services__card">
+               <i class="ri-shield-check-line"></i>
+               <h3 class="services__title">ხარისხის გარანტია</h3>
+               <p class="services__description">მიიღეთ საუკეთესო პროდუქცია</p>
+            </article>
+         </div>
+      </section>
+
+      <!-- ============================== ABOUT ====================-->
+      <section class="about section" id="about">
+         <div class="about__container container grid">
+            <div class="about__data">
+               <h2 class="section__title about__title">ჩვენს შესახებ</h2>
+               <p class="about__description">
+                  ჩვენ ვნებიანად მივიტანთ კითხვის ხალისს ყველასთან. ჩვენი წიგნების კოლექცია მოიცავს ყველა
+                  ასაკისა და ინტერესის წიგნებს, მომხიბლავი საბავშვო ისტორიებიდან დაწყებული, მოზრდილებისთვის დამაფიქრებელ
+                  რომანებამდე.
+               </p>
+               <p class="about__description">
+                  წიგნის ინდუსტრიაში მრავალწლიანი გამოცდილებით, ჩვენ ვცდილობთ მოგაწოდოთ არა მხოლოდ წიგნები, არამედ
+                  გასაღებები
+                  ახალი სამყაროების, იდეებისა და თავგადასავლებისთვის. ჩვენი თავდადებული წიგნის მოყვარულთა გუნდი
+                  ყოველთვის მზადაა
+                  დაგეხმაროთ რომ იპოვოთ
+                  თქვენი შემდეგი საყვარელი წიგნი.
+               </p>
+               <a href="#filter-section" class="button">აღმოაჩინეთ წიგნები</a>
+            </div>
+
+            <div class="about__img-wrapper">
+               <img
+                  src="https://placehold.co/600x400"
+                  alt="About Us" class="about__img">
+            </div>
+         </div>
+      </section>
+
+      <!--==================== FEATURED ====================-->
+      <section class="featured section" id="featured">
+         <h2 class="section__title">
+            გამორჩეული წიგნები
+         </h2>
+         <div class="featured__container container">
+            <div class="featured__swiper swiper">
+               <div class="swiper-wrapper">
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-1.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-2.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-3.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-4.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-5.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-6.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-7.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-8.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-9.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+
+                  <article class="featured__card swiper-slide">
+                     <img src="assets/img/book-10.png" alt="image" class="featured__img">
+                     <h2 class="featured__title">
+                        გამორჩეული წიგნები
+                     </h2>
+                     <div class="featured__prices">
+                        <span class="featured__discount">12₾</span>
+                        <span class="featured__price">20₾</span>
+                     </div>
+                     <div class="new__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+
+                     <div class="featured__actions">
+                        <!-- <button>
+                           <i class="ri-eye-line"></i>
+                        </button> -->
+                        <button id="atheart">
+                           <i class="ri-heart-3-line"></i>
+                        </button>
+                     </div>
+                  </article>
+               </div>
+               <div class="swiper-button-prev">
+                  <i class="ri-arrow-left-s-line"></i>
+               </div>
+               <div class="swiper-button-next">
+                  <i class="ri-arrow-right-s-line"></i>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== DISCOUNT ====================-->
+      <section class="discount section" id="discount">
+         <div class="discount__container container grid">
+            <div class="discount__data">
+               <h2 class="discount__title section__title">
+                  50%-მდე ფასდაკლება
+               </h2>
+               <p class="discount__description">
+                  ისარგებლეთ ჩვენი ფასდაკლებებით, შეიძინეთ საუკეთესო წიგნები საუკეთესო მდგომარეობაში. რაც უფრო მეტს
+                  შეიძენთ მით უფრო მეტ ნივთზე იქნება ფასდაკლება.
+               </p>
+               <a href="#" class="button">შეიძინეთ ახლა</a>
+            </div>
+            <div class="discount__images">
+               <img src="assets/img/discount-book-1.png" alt="image" class="discount__img-1">
+               <img src="assets/img/discount-book-2.png" alt="image" class="discount__img-2">
+            </div>
+         </div>
+      </section>
+
+      <!--==================== NEW BOOKS ====================-->
+      <section class="new section" id="new">
+         <h2 class="section__title">
+            ახალი წიგნები
+         </h2>
+         <div class="new__container container">
+            <div class="new__swiper swiper">
+               <div class="swiper-wrapper">
+                  <div class="new__card swiper-slide">
+                     <img src="assets/img/book-1.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="new__card swiper-slide">
+                     <img src="assets/img/book-2.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </div>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-3.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-4.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-5.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-6.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-7.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-8.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-9.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-10.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+               </div>
+            </div>
+
+            <div class="new__swiper swiper">
+               <div class="swiper-wrapper">
+                  <div class="new__card swiper-slide">
+                     <img src="assets/img/book-10.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="new__card swiper-slide">
+                     <img src="assets/img/book-9.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </div>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-8.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-7.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-6.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-5.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-4.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-3.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-2.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+
+                  <di class="new__card swiper-slide">
+                     <img src="assets/img/book-1.png" alt="image" class="new__img">
+
+                     <div>
+                        <h2 class="new__title">ახალი წიგნი</h2>
+                        <div class="new__prices">
+                           <span class="new__discount">8₾</span>
+                           <span class="new__price">20₾</span>
+                        </div>
+                        <div class="new__stars">
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-fill"></i>
+                           <i class="ri-star-half-fill"></i>
+                        </div>
+                        <div class="new__actions">
+                           <button class="new__button" id="atheart"><i class="ri-heart-3-line"></i></button>
+                           <!-- <button><i class="ri-eye-line"></i></button> -->
+                        </div>
+                     </div>
+                  </di>
+               </div>
+            </div>
+
+         </div>
+      </section>
+      <!--===================== filter ==================================-->
+      <section id="filter-section" class="books-section section container">
+         <h2 class="section__title">ჩვენი წიგნების კოლექცია</h2>
+
+         <div class="books__filters">
+            <button class="books__filter-btn active" data-filter="all">ყველა</button>
+            <button class="books__filter-btn" data-filter="kids">ბავშვები</button>
+            <button class="books__filter-btn" data-filter="mature">მოზარდები</button>
+            <button class="books__filter-btn" data-filter="baby">ჩვილები</button>
+         </div>
+
+         <div class="books__container grid" id="books-container">
+            <!-- Books will be dynamically added here -->
+         </div>
+      </section>
+      <!--==================== JOIN ====================-->
+      <!-- <section class="join section">
+         <div class="join__container">
+            <img src="assets/img/join-bg.jpg" alt="image" class="join__bg">
+            <div class="join__data container grid">
+               <h2 class="join__title section__title">
+                  გამოიწერეთ რათა მიიღოთ ახალი ამბები
+               </h2>
+               <form action="" class="join__form">
+                  <input type="email" placeholder="მიუთითეთ თქვენი ემაილი" class="join__input">
+                  <button type="submit" class="join__button button">გამოწერა</button>
+               </form>
+            </div>
+         </div>
+      </section> -->
+
+      <!--==================== TESTIMONIAL ====================-->
+      <section class="testimonial section" id="testimonial">
+         <h2 class="section__title">
+            მომხმარებლის არჩევანი
+         </h2>
+
+         <div class="testimonial__container container">
+            <div class="testimonial__swiper swiper">
+               <div class="swiper-wrapper">
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-1.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        ანონიმური
+                     </h2>
+                     <p class="testimonial__description">
+                        საუკეთესო საკანცელარიო წიგნების და სკოლის აღჭურვილობის შესაძენად.
+                     </p>
+
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                     </div>
+                  </article>
+
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-2.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        ანონიმური
+                     </h2>
+                     <p class="testimonial__description">
+                        საუკეთესო საკანცელარიო წიგნების და სკოლის აღჭურვილობის შესაძენად.
+                     </p>
+
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+                  </article>
+
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-3.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        ანონიმური
+                     </h2>
+                     <p class="testimonial__description">
+                        საუკეთესო საკანცელარიო წიგნების და სკოლის აღჭურვილობის შესაძენად.
+                     </p>
+
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-empty"></i>
+                     </div>
+                  </article>
+
+                  <article class="testimonial__card swiper-slide">
+                     <img src="assets/img/testimonial-perfil-4.png" alt="image" class="testimonial__img">
+                     <h2 class="testimonial__title">
+                        ანონიმური
+                     </h2>
+                     <p class="testimonial__description">
+                        საუკეთესო საკანცელარიო წიგნების და სკოლის აღჭურვილობის შესაძენად.
+                     </p>
+
+                     <div class="testimonial__stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <div class="footer__content">
+            <a href="#" class="footer__logo">
+               <i class="ri-book-line"></i> boo-store
+            </a>
+            <p class="footer__description">
+               იპოვეთ და აღმოაჩინეთ საუკეთესო<br>
+               წიგნები სხვადასხვა ცნობილი<br>
+               მწერლებიდან.
+            </p>
+         </div>
+
+
+         <div class="footer__content">
+            <h3 class="footer__title">დაგვიკავშირდით</h3>
+            <div class="footer__info">
+               <p>ზესტაფონი, ...</p>
+               <p>book-store@gmail.com</p>
+               <p>+995 12 34 56 78</p>
+            </div>
+            <div class="footer__social">
+               <a href="" target="_blank"
+                  class="footer__social-link">
+                  <i class="ri-facebook-fill"></i>
+               </a>
+               <a href="" target="_blank" class="footer__social-link">
+                  <i class="ri-messenger-fill"></i>
+               </a>
+               <!-- Add more social media links as needed -->
+            </div>
+         </div>
+      </div>
+      <p class="footer__copy">© 2024 ყველა უფლება დაცულია | by <a
+            style="font-size: var(--smaller-font-size); color: var(--first-color);" target="_blank"
+            href="https://vakhodev.netlify.app">VakhoDev</a></p>
+   </footer>
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+   </a>
+
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="assets/js/swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>
